@@ -1,0 +1,14 @@
+mixin boardBlock(board={})
+    .boardBlock__box
+        div.boardBlock__item
+            span=board.number
+        div.boardBlock__item
+            a.boardBlock__link(href=routes.boardDetail(board.id))
+                h1.boardBlock__title=board.title
+        div.boardBlock__item
+            span=board.user
+        div.boardBlock__item
+            span=board.createAt
+        div.boardBlock__notItem
+            span=board.view
+            

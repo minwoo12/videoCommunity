@@ -1,0 +1,58 @@
+.uploadEdit__container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .uploadEdit__form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      button {
+        width: max-content;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #0984e3;
+        background-color: #74b9ff;
+        &:hover {
+          color: #0984e3;
+        }
+      }
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10%;
+      margin-bottom: 10%;
+      font-weight: bold;
+      text-align: center;
+      border: 2px solid #74b9ff;
+      border-radius: 20px;
+      &:focus {
+        outline: none;
+      }
+      &:first-child {
+        width: 60%;
+        height: 5vh;
+      }
+      &:nth-child(2) {
+        height: 20vh;
+      }
+      &:nth-child(3) {
+        width: max-content;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #0984e3;
+        background-color: #74b9ff;
+        &:hover {
+          color: #0984e3;
+        }
+      }
+    }
+  }
+}

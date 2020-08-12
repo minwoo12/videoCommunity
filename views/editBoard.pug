@@ -1,0 +1,11 @@
+extends layouts/main
+
+block content
+     .editBoard__container-box
+        .editBoard__container
+            form(action=routes.editBoard(board.id), method="post")
+                input(type="text", name="title", value=board.title)
+                input(type="textarea", name="content", value=board.title)
+                input(type="submit", value="Do Edit")
+            a(href=routes.deleteBoard(board.id))
+                button Delete

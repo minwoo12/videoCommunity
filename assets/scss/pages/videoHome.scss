@@ -1,0 +1,9 @@
+.video__main {
+  padding: 30px 30px 0px 30px;
+}
+
+.video__main .videoBlock__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 20px;
+}

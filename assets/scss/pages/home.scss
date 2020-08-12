@@ -1,0 +1,59 @@
+.home__main {
+  display: flex;
+  justify-content: center;
+  .home__container {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .community__box,
+    .video__box {
+      width: 30%;
+      .community__list-title,
+      .videos__list-title {
+        color: #fdcb6e;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .community__list-container,
+      .videos__list-container {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        background-color: #a29bfe;
+        border: 2px solid #0984e3;
+        .number__box {
+          width: 15%;
+          @include homeRowGrid();
+          border-right: 1px solid #74b9ff;
+          .number {
+            padding-left: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-weight: bold;
+            border-bottom: 2px solid #74b9ff;
+          }
+        }
+        .community__box2 {
+          width: 85%;
+          height: 100%;
+          @include homeRowGrid();
+          .board__list {
+            @include list();
+          }
+        }
+      }
+      .video__box2 {
+        width: 85%;
+        height: 100%;
+        @include homeRowGrid();
+        .video__list {
+          @include list();
+        }
+      }
+    }
+  }
+}

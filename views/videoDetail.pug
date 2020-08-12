@@ -1,0 +1,27 @@
+extends layouts/main
+
+block content
+    .video__container-box
+        .video__container
+            video(src=`/${video.fileUrl}`, controls=true)
+            .video__container-content
+                .videoDetail__column
+                    .videoDetail__title=video.title
+                .videoDetail__column
+                    .videoDetail__views 조회수 : #{video.views}회
+                    .videoDetail__createdAt=video.createAt
+                .videoDetail__column
+                    .videoDetail__description 비디오 설명 - #{video.description}
+                .video__number
+                    span#jsVideoNumber=video.comments.length
+                    |    Comments
+                form.videoAdd__comment#jsvideoAddComment
+                    input(type="text", placeholder="Comment")
+                ul.video__comment-list#jsvideoCommentList
+                    each comment in video.comments.reverse()
+                        li
+                            span=comment.text
+            if (loggedUser)
+                if video.creator.id === loggedUser.id
+                    a(href=routes.editVideo(video.id))
+                        button editVideo

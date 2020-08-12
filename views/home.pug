@@ -1,0 +1,31 @@
+extends layouts/main
+
+include mixins/boardListBlock
+include mixins/videoListBlock
+block content
+    .home__main
+        .home__container
+            .community__box
+                .community__list-title| Community rank 
+                .community__list-container
+                    .number__box
+                        -for(let i =1; i<11; i++)
+                            .number #{i}
+                    .community__box2
+                        each item in boards
+                            +boardListBlock({
+                                id: item.id,
+                                title: item.title
+                            })
+            .video__box
+                .videos__list-title| Video rank
+                .videos__list-container
+                    .number__box
+                        -for(let i =1; i<11; i++)
+                            .number #{i}
+                    .video__box2
+                        each item in videos 
+                            +videoListBlock({
+                                id:item.id,
+                                title: item.title
+                            })

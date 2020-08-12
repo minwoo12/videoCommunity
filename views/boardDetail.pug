@@ -1,0 +1,21 @@
+extends layouts/main
+
+block content
+    .board__container-box
+        .board__container
+            .board__title 제목 : #{board.title}
+            .board__description=board.content
+        .board__number
+            span#jsBoardNumber=board.comments.length
+            |    Comments
+        form.boardAdd__comment#jsboardAddComment
+            input(type="text", placeholder="comment")
+        ul.board__comment-list#jsCommentList
+            each comment in board.comments.reverse()
+                li
+                    span=comment.text
+        if (loggedUser)
+                if (loggedUser.id === board.creator.id)
+                    a(href=routes.editBoard(board.id))
+                        button Edit Board
+        

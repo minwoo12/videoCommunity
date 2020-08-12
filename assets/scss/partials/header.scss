@@ -1,0 +1,106 @@
+header {
+  height: 10vh;
+  display: flex;
+  color: white;
+  background-color: #feca57;
+  .header__column {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      &:visited {
+        color: white;
+      }
+    }
+    &:first-child,
+    &:nth-child(4) {
+      width: 20%;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 30%;
+    }
+    .header__logo {
+      margin-left: 30%;
+      i {
+        font-size: 40px;
+        &:hover {
+          color: #d63031;
+        }
+      }
+    }
+    .search {
+      margin-left: 10%;
+      padding: 10px;
+      width: 80%;
+      display: flex;
+      background-color: #ffeaa7;
+      border-radius: 8px;
+      form {
+        width: 100%;
+        input {
+          width: 100%;
+          border: 0;
+          border-radius: 10px;
+          text-align: center;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .site_menu {
+      li {
+        font-size: 20px;
+        font-weight: bold;
+        span {
+          color: white;
+          &:hover {
+            color: #0984e3;
+          }
+        }
+      }
+    }
+    .login__menu {
+      li:not(.video__upload) {
+        padding: 3%;
+        width: max-content;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #74b9ff;
+        border-radius: 20px;
+        background-color: #74b9ff;
+        &:hover {
+          background-color: #a29bfe;
+          span {
+            &:hover {
+              color: #0984e3;
+            }
+          }
+        }
+      }
+      .video__upload {
+        padding: 3%;
+        width: max-content;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #74b9ff;
+        border-radius: 20px;
+        background-color: #74b9ff;
+        &:hover {
+          background-color: #a29bfe;
+          span {
+            &:hover {
+              color: #0984e3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

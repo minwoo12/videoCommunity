@@ -1,0 +1,37 @@
+extends layouts/main
+
+include mixins/boardBlock
+block content
+    main.board__main
+        .board__grid
+            .board__grid-box
+                .board__grid-nav
+                    div.nav__item
+                        span Number
+                    div.nav__item
+                        span Title
+                    div.nav__item
+                        span User
+                    div.nav__item
+                        span CreatedAt
+                    div.nav__item
+                        span View
+                each item in board
+                    if id === String(item.pages)
+                       +boardBlock({
+                                number: item.number,
+                                id: item.id,
+                                title: item.title,
+                                user: item.creator.name,
+                                createAt: item.createAt,
+                                view: item.views-1
+                            })     
+            .board__link-box
+                .board__link-list
+                    -for(let i=pages; i>0 && i<=pages; i--) 
+                        a(href=routes.communityMain(i))
+                            .board__pageNumber 
+                                li #{(pages+1)-i}
+                .board__link-p
+                    a.board__link(href=`/community${routes.write}`)
+                        button.write__button Write

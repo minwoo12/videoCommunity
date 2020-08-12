@@ -1,0 +1,34 @@
+header
+    .header__column
+        .header__logo
+            a(href=routes.home)
+                i.fas.fa-box
+    .header__column
+        .search
+            form(action=routes.search, method="get")
+                input(type="text", name="term", placeholder="Search")
+    .header__column
+        ul.site_menu
+            li
+                a(href=routes.communityMain(pages))
+                    span Community
+            li
+                a(href=routes.video)
+                    span Video      
+    .header__column
+        ul.login__menu
+            if !loggedUser
+                li
+                    a(href=routes.join)
+                        span Join
+                li
+                    a(href=routes.login)
+                        span Login
+            else
+                li.video__upload
+                    a(href=`/videos${routes.upload}`)
+                        span VideoUpload
+                li
+                    a(href=routes.logout)
+                        span Logout
+            

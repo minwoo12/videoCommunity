@@ -1,0 +1,46 @@
+.board__container-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .board__container {
+    margin-top: 5%;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 80vh;
+    border: 1px solid gray;
+    .board__title {
+      border-bottom: 1px solid gray;
+    }
+  }
+  .board__number {
+    margin-bottom: 20px;
+  }
+  .boardAdd__comment {
+    margin-bottom: 20px;
+  }
+  .board__comment-list {
+    margin-bottom: 20px;
+    li {
+      width: max-content;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: #74b9ff;
+      border: 2px solid #0984e3;
+      border-radius: 10px;
+    }
+  }
+  button {
+    margin-bottom: 20px;
+    width: max-content;
+    height: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #74b9ff;
+    border-radius: 10px;
+    border: 2px solid #0984e3;
+    &:hover {
+      color: #0984e3;
+    }
+  }
+}

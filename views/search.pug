@@ -1,0 +1,14 @@
+extends layouts/main
+include mixins/videoBlock
+
+block content
+    .search__videos
+        if videos.length === 0
+            p Not Found Videos
+        each item in videos
+                +videoBlock({
+                    id: item.id,
+                    fileUrl: item.fileUrl,
+                    title: item.title,
+                    views:item.views
+                })

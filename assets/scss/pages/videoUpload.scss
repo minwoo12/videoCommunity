@@ -1,0 +1,68 @@
+.upload__container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.upload__container .upload__form {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload__form input:nth-child(2) {
+  display: none;
+}
+
+.upload__form label {
+  margin-bottom: 10%;
+  padding: 10px;
+  width: max-content;
+  height: max-content;
+  text-align: center;
+  border: 2px solid #74b9ff;
+  font-weight: bold;
+  border-radius: 20px;
+  &:hover {
+    color: white;
+    background-color: #3498db;
+  }
+}
+
+.upload__form input {
+  margin-bottom: 10%;
+  width: 70%;
+  height: 5vh;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #74b9ff;
+  border-radius: 20px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.upload__form textarea {
+  margin-bottom: 10%;
+  width: 100%;
+  height: 20vh;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #74b9ff;
+  border-radius: 20px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.upload__form .upload__submit {
+  color: white;
+  background-color: #2ecc71;
+  &:hover {
+    color: black;
+    background-color: #27ae60;
+  }
+}

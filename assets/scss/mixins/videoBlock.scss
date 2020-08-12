@@ -1,0 +1,16 @@
+a {
+  text-decoration: none;
+  &:visited {
+    color: gray;
+  }
+}
+
+.video__box .videoBlock__video {
+  width: 100%;
+}
+
+.video__box .videoBlock__content {
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+}
